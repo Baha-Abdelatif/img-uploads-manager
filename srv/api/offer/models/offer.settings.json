@@ -33,6 +33,16 @@
     "isPublished": {
       "type": "boolean",
       "default": false
+    },
+    "Category": {
+      "type": "enumeration",
+      "enum": [
+        "Default",
+        "Cars",
+        "Jobs",
+        "Estate"
+      ],
+      "default": "Default"
     }
   }
 }
