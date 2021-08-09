@@ -17,15 +17,46 @@ function add_offer(e) {
   const payload = {
     Title,
     Description,
-    Category,
-    Picture
+    Category
   }
 
-  // fetch()
+  fetch(`${api_url}/offers`, {
+    method: "POST",
+    headers: {
+      "content-type": "application/json"
+    },
+    body: JSON.stringify(payload)
+  })
+    .then(res => res.json())
+    .then(created_offer => {
+      // console.log("Created Offer: ", created_offer)
+      const form_datas = new FormData();
+      form_datas.append("files", Picture);
+      form_datas.append("ref", "Offer");
+      form_datas.append("refId", created_offer.id);
+      form_datas.append("field", "Picture")
 
+      fetch(`${api_url}/upload`, {
+        method: "POST",
+        body: form_datas
+      })
+        .then(res => {
+          console.log("img upload res -> ", res)
+        })
+        .catch(err => {
+          console.error(err)
+        })
+    })
+    .catch(err => {
+      console.error(err)
+    })
 }
 
 function add_picture() {
+  if (!this.files) {
+    console.log('retry!')
+    return
+  }
   console.log("Image: ", this.files[0])
-  picture_to_add = this.file[0];
+  picture_to_add = this.files[0];
 }
