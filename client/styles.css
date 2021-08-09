@@ -1,6 +1,6 @@
 body {
   background-color: green;
-  color:white;
+  color: white;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   padding: 5%;
 }
@@ -8,16 +8,19 @@ h1 {
   text-align: center;
   text-transform: uppercase;
 }
-h3{
+h3 {
   font-size: 1.75rem;
   text-transform: uppercase;
   margin: 0 0 2% 2%;
-  text-decoration:underline;
+  text-decoration: underline;
 }
 
 .main {
   width: 90%;
   margin: 0 auto;
+}
+
+.container {
   display: flex;
   justify-content: center;
   flex-direction: column;

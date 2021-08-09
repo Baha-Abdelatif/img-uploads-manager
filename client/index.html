@@ -1,15 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./styles.css">
-  <script src="./script.js" defer></script>
-  <title>Images Uploader</title>
-</head>
-<body>
-  <h1>Strapi Images Uploader</h1>
-  <div class="main"></div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./script.js" defer></script>
+    <title>Images Uploader</title>
+  </head>
+  <body>
+    <h1>Strap'raig'List</h1>
+    <div class="main">
+      <div class="form_container container">
+        <h3>Add an offer</h3>
+        <form id="add_offer_form" class="container">
+          <input
+            type="text"
+            placeholder="Title"
+            id="add_offer_title"
+            class="form_input"
+            autocomplete="none"
+          />
+          <select name="categories" id="add_offer_category">
+            <option value="default">----</option>
+            <option value="cars">Cars</option>
+            <option value="job">Job</option>
+            <option value="estate">Estate</option>
+          </select>
+          <textarea
+            name="description"
+            id="add_offer_description"
+            cols="30"
+            rows="10"
+            class="form_input"
+          >
+Add a description for your offer...
+</textarea
+          >
+          <input type="file" id="add_offer_picture" class="form_input" />
+          <button type="submit">Submit This Offer</button>
+        </form>
+      </div>
+    </div>
+  </body>
 </html>
