@@ -1,0 +1,17 @@
+.offer_container {
+  border: 1px solid white;
+  padding: 5%;
+  margin: 1% auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.offer_infos {
+  width: 50%;
+}
+
+.offer_container img {
+  width: 30%;
+  display: inline;
+}

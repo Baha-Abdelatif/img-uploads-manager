@@ -41,7 +41,7 @@ function add_offer(e) {
         body: form_datas
       })
         .then(res => {
-          console.log("img upload res -> ", res)
+          // console.log("img upload res -> ", res)
         })
         .catch(err => {
           console.error(err)
@@ -54,9 +54,8 @@ function add_offer(e) {
 
 function add_picture() {
   if (!this.files) {
-    console.log('retry!')
     return
   }
-  console.log("Image: ", this.files[0])
+  // console.log("Image: ", this.files[0])
   picture_to_add = this.files[0];
 }
